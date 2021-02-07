@@ -1,7 +1,7 @@
 #meal_items{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap:20px;
+    grid-gap:30px;
 
 }
 .meal{
@@ -10,7 +10,7 @@
    border:none;
    text-align: center;
    width:250px;
-   margin-left:40px;
+   margin-left:30px;
 }
 .meal_name{
     font-size:20px;
