@@ -10,9 +10,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
    <link rel="stylesheet" href="style.css">
-   <style>
-        
-    </style>
 </head>
 
 <body>
@@ -53,16 +50,14 @@
                 
                 mealDiv.className = 'meal shadow';
                 const mealInfo = `
-                    <img src="${meal.strMealThumb}">
+                    <img src="${meal.strMealThumb}" onclick="displayMealDetails('${meal.idMeal}')">
                     <br>
                     <h3 class="meal_name mt-3">${meal.strMeal}</h3>
-                    <button class="btn btn-danger" onclick="displayMealDetails('${meal.idMeal}')">Details</button>
                    `;
                     mealDiv.innerHTML = mealInfo;
                     mealItem.appendChild(mealDiv);
               }
         }
-    
 });
 
 
@@ -81,7 +76,7 @@ const displayMealDetails = id => {
      const mealDetails = document.getElementById('meal_details');
      mealDetails.className = 'mealDetail shadow ';
      mealDetails.innerHTML = `
-     <img src="${meal.strMealThumb}">
+    <img src="${meal.strMealThumb}">
      </br>
         <h3 class="mt-3">${meal.strMeal}</h3>
         <h6 class="mt-2">Ingredients</h6>
@@ -99,10 +94,6 @@ const displayMealDetails = id => {
 
       li.appendChild('meal_list');
 }
-
-        
-       
-    </script>
+   </script>
 </body>
-
 </html>
